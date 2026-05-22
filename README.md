@@ -200,21 +200,6 @@ The emulator follows the standard LC-3 execution cycle:
 6. Update registers, memory, and condition flags
 7. Continue until a `HALT` trap or error occurs
 
-Main execution loop:
-
-```cpp
-while (running)
-{
-    unsigned short instr = Memory::read(reg[R_PC]++);
-    unsigned short op = instr >> 12;
-
-    switch (op)
-    {
-        // instruction handlers
-    }
-}
-```
-
 ---
 
 ## ⚠️ Important Note
